@@ -6,7 +6,8 @@
         <img src="../assets/logo.png" alt="">
       </div>
       <!-- 登录表单区域 -->
-      <el-form ref="loginFormRef" :model="loginFrom" :rules="loginFromRules" label-width="0px" class="login_from">
+      <!-- ref 就能拿到表单的实例对象 -->
+      <el-form ref="loginFormRef" :model="loginFrom" :rules="loginFromRules" class="login_from">
         <!-- 用户名区域 -->
         <el-form-item prop="username">
           <el-input v-model="loginFrom.username" prefix-icon="iconfont icon-user"></el-input>
@@ -52,7 +53,7 @@ export default {
   methods: {
     // 点击重置按钮 重置登录表单
     restLoginForm() {
-      // console.log(this);
+      console.log(this);
        this.$refs.loginFormRef.resetFields();
     },
     // 登陆方法
@@ -114,7 +115,7 @@ export default {
 }
 .login_from {
   position: absolute;
-  bottom: 0;
+  bottom: 30px;
   width: 100%;
   padding: 0 20px;
   box-sizing: border-box;
