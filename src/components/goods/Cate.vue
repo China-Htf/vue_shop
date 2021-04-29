@@ -4,7 +4,7 @@
     <el-breadcrumb separator-class="el-icon-arrow-right">
       <el-breadcrumb-item :to="{ path: '/home' }">首页</el-breadcrumb-item>
       <el-breadcrumb-item>商品管理</el-breadcrumb-item>
-      <el-breadcrumb-item>商品分配</el-breadcrumb-item>
+      <el-breadcrumb-item>商品分类</el-breadcrumb-item>
     </el-breadcrumb>
 
     <!-- 卡片视图区域 -->
@@ -278,14 +278,11 @@ export default {
 };
 </script>
 
-<style>
+<style lang="less" scoped>
 .treeTable {
   margin-top: 15px;
 }
 .el-cascader {
   width: 100%;
 }
-.el-cascader-menu{
-    height: 300px;
-  }
 </style>
