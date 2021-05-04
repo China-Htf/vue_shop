@@ -62,7 +62,7 @@
           </el-tab-pane>
           <el-tab-pane label="商品参数" name="1">
             <!-- 渲染表单的 Item 项 -->
-            <el-form-item :label="item.attr_name" v-for="item in myTableData">
+            <el-form-item :label="item.attr_name" v-for="item in myTableData" :key="item.attr_id">
               <!-- 多选框 -->
               <el-checkbox-group v-model="item.attr_vals">
                 <el-checkbox
@@ -76,7 +76,7 @@
             </el-form-item>
           </el-tab-pane>
           <el-tab-pane label="商品属性" name="2">
-            <el-form-item :label="item.attr_name" v-for="item in oyTableData">
+            <el-form-item :label="item.attr_name" v-for="item in oyTableData" :key="item.attr_id">
               <el-input v-model="item.attr_vals"></el-input>
             </el-form-item>
           </el-tab-pane>
